@@ -1,0 +1,65 @@
+body{
+    background-color: #edebcf;
+    font-family: 'STIX Two Text', serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'STIX Two Text', serif;
+}
+
+a{
+    color:#496074;
+    text-decoration: none;
+}
+
+.big-nav-bottom-thing{
+    display: none;
+}
+
+#typewriter{
+        float: left;
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        z-index: 1000;
+        padding: 5px;
+        color: #496074;
+        font-weight: bold;
+}
+
+/******************* ONLY PHONE DISPLAY ******************************************************/
+@media only screen and (max-width:992px){
+    /* div#navbarNavDropdown.collapse.nodesktop{
+        display: block !important;
+    } */
+    div#navbarNavDropdown.collapse.nophone{
+        display:none !important;
+    }
+}
+
+/*************************************** ONLY DESKTOP DISPLAY ********************************************/
+@media only screen and (min-width:992px) {
+    nav:hover+.big-nav-bottom-thing{
+        display: block;
+    }
+    .big-nav-bottom-thing:hover{
+        display: block;
+    }
+    .dropdown-menu, .dropdown-menu .show{
+        display: none;
+    }
+    .nodesktop{
+        display: block;
+    }
+    .nophone{
+        display:none;
+    }
+    /* div#navbarNavDropdown.collapse.nophone{
+        display: block !important;;
+    } */
+
+    div#navbarNavDropdown.collapse.nodesktop{
+        display: none !important;;
+    } 
+}
+
