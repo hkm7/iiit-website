@@ -36,7 +36,7 @@
         }
     </style>
 </head>
-<body>
+<body onload='startFunction()'>
     <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -199,23 +199,13 @@
         </div>
       <!-- NAVBAR ENDS -->
 
-        <script>
-            var i = 0;
-            var txt = 'It works mwone'; /* The text */
-            var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-            function typeWriter() {
-                if (i < txt.length) {
-                    $('#typewr').innerHTML += txt.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, speed);
-                }
-            }
-        </script>
-
       <!-- CAROUSEL BEGINS -->
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style='z-index: -1;' onload="typeWriter()">
-        <div id='typewr' style='font-size: 100px;'></div>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style='z-index: -1;'>
+        <div id='typeW'>
+            <div id='typewr' style='font-size: 100px;'></div>
+            <div id='typewr2' style='font-size: 50px;'></div>
+        </div>
+        
         <div class="carousel-inner" style='opacity:0.4;'>
           <div class="carousel-item active">
             <img src="./Assets/images/carousel-img1.jpg" class="d-block w-100" alt="...">
@@ -229,7 +219,5 @@
         </div>
       </div>
       <!-- CAROUSEL ENDS -->
-
-
 </body>
 </html>
